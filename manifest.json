@@ -1,0 +1,15 @@
+{
+  "name": "FalyPik Vima Analyzer",
+  "short_name": "Vima Analyzer",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0056b3",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2910/2910816.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
