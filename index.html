@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>फळपीक विमा ट्रिगर प्रणाली</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <!-- PapaParse Library for CSV reading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>फळपीक विमा ट्रिगर विश्लेषण प्रणाली</h2>
+        
+        <div class="card">
+            <h3>स्कायमेट अहवाल (CSV) अपलोड करा</h3>
+            <input type="file" id="csvFile" accept=".csv" />
+            <button onclick="processData()">रिपोर्ट तयार करा</button>
+        </div>
+
+        <div id="reportSection" style="display:none;">
+            <h3>विश्लेषण रिपोर्ट</h3>
+            <div id="reportContent"></div>
+            <button onclick="window.print()">Print / Save PDF</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
